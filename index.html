@@ -1147,21 +1147,573 @@
 
   <script>
     // Reviews data - Replace with your actual reviews
-    const reviews = [
-      { name: "John Smith", rating: 5, body: "Excellent service! They diagnosed and fixed my engine problem quickly. Very professional and honest pricing." },
-      { name: "Sarah Johnson", rating: 5, body: "Best auto shop in OKC! They always take great care of my vehicle. Highly recommend!" },
-      { name: "Michael Davis", rating: 5, body: "Fast, reliable, and trustworthy. They fixed my AC and it works perfectly now." },
-      { name: "Emily Wilson", rating: 5, body: "Great customer service and fair prices. They explained everything clearly." },
-      { name: "Robert Brown", rating: 5, body: "These guys know their stuff! Fixed my brake issue same day." },
-      { name: "Lisa Anderson", rating: 5, body: "Very professional team. They went above and beyond to help me out." },
-      { name: "David Martinez", rating: 5, body: "Honest mechanics are hard to find. These guys are the real deal!" },
-      { name: "Jennifer Taylor", rating: 5, body: "Quick oil change service and they even checked my tires for free." },
-      { name: "James Thomas", rating: 5, body: "They saved me hundreds compared to the dealership quote. Excellent work!" },
-      { name: "Maria Garcia", rating: 5, body: "Friendly staff and quality work. My car runs better than ever." },
-      { name: "Christopher Lee", rating: 5, body: "Fixed my car's electrical issue when no one else could figure it out." },
-      { name: "Amanda White", rating: 5, body: "Great experience from start to finish. Will definitely come back!" },
-      { name: "Daniel Clark", rating: 5, body: "Professional, fast, and affordable. Can't ask for more!" }
-    ];
+   [
+  {
+    "name": "Crawldragon",
+    "rating": 5,
+    "body": "This is my second time having my car checked and fixed up here and the third time I've been in the shop in general. I am always blown away by the experience. Kofi is a friendly and very patient man who makes it a point to explain what he is doing to fix my car. He even gave me advice to look into my warranty which saved me a bunch of money! My car runs like it is brand new! He has definitely earned my trust and has become my new go-to mechanic. I highly recommend him to anyone looking for an honest mechanic."
+  },
+  {
+    "name": "Kushtrim Haziri",
+    "rating": 5,
+    "body": "Great service! They fixed my car quickly and even cleaned my engine, it looks brand new. Honest, professional, and highly recommended!"
+  },
+  {
+    "name": "Jennifer Walker",
+    "rating": 5,
+    "body": "Found my new mechanic! I called first thing Saturday morning to get my brakes fixed, very professional, excellent prices, even stayed late to make sure my car was done same day. Very very happy with this place and will be coming here for all future fixes. Highly recommend! (Not to mention the warranties)"
+  },
+  {
+    "name": "Kenneth Watson Watson",
+    "rating": 5,
+    "body": "Thank you so much for helping out with my car awesome group of guys up here! They explained what was going on in detail and gave me a great price thank you Kofi ! They have my business."
+  },
+  {
+    "name": "William Calvin",
+    "rating": 5,
+    "body": "THIS GUY KOFI IS ONE OF THE BEST I’VE HAD THE PLEASURE OF DEALING WITH IN ALL MY YEARS IN OKC, I love his honesty, his sincerity, his professional customer service that he has shown me, when you come to him. He will put your needs first, and you won’t be sorry, give him a try with your automobile it will be worth it!!😊😊 If I could give him more stars it would be 10 ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️"
+  },
+  {
+    "name": "Latoya Jones",
+    "rating": 5,
+    "body": "Came into this shop with a major issue. The owner looked under my hood heard me crank the car and knew why the issue was. He couldn’t fix it but lead me to getting a brand new motor for free. The simple fact he had knowledge of a national recall and the knowledge to direct me to the dealer shows he is honest and a man of integrity."
+  },
+  {
+    "name": "Christopher Patten",
+    "rating": 5,
+    "body": "Back in 2019, my engine completely flooded. The car completely shutdown, breaks locked up, and get engine was literally full of water. In a series of actual miracles, God led me to Kofi, who fixed my engine, and got my car back in near perfect condition, and for an extremely reasonable price. I honestly can't say enough about the professionalism and amazing work he did. Don't go anywhere else, this man is an absolute professional and an expert at his craft."
+  },
+  {
+    "name": "Tina Foster",
+    "rating": 5,
+    "body": "I took my car to get a serpentine belt price was really good and work was great please look them up for all your auto needs !!! ❤️ staff is very friendly and efficient Kofi and his mechanics are amazing just had more work done and price is always great I wouldn’t take my car anywhere else !!!"
+  },
+  {
+    "name": "Astrud Ray-Kubier",
+    "rating": 5,
+    "body": "Took my van in with the check engine light on. It was quickly diagnosed and parts ordered. I enjoy having someone in the neighborhood who is willing to take the time to explain what my options are. Pricing is always fair. Thank you Kofi!"
+  },
+  {
+    "name": "Lilihi Patris",
+    "rating": 5,
+    "body": "Mr Kofi is so personable with his customers and always goes above and beyond. We have trusted him with our cars for years now and don't want to go anywhere else."
+  },
+  {
+    "name": "David Phelan",
+    "rating": 5,
+    "body": "This is the best mechanic shop I've ever been to. I trust them completely with my repairs after dealing with lots of scammers these people are great Kofi is awesome."
+  },
+  {
+    "name": "Kofi Manu",
+    "rating": 5,
+    "body": "I am very impressed with the excellent customer service, which provided insightful information about cars and also helped me save money."
+  },
+  {
+    "name": "Issac Bryson",
+    "rating": 5,
+    "body": "Kofi does great work with cars . An outstanding job 👏 …"
+  },
+  {
+    "name": "Shelly Taft",
+    "rating": 5,
+    "body": "Easy to work with affordable pricing, and they offer warranty on their work & parts. Great communication."
+  },
+  {
+    "name": "Genae Palmer",
+    "rating": 5,
+    "body": "Ac hasn’t been working for a few months and we all know this isn’t the season to ride in heat, I called and pulled up on my boy Kofi at 23 N Villa Automotive and he got me right, HIGHLY RECOMMEND."
+  },
+  {
+    "name": "A.M.",
+    "rating": 5,
+    "body": "Great service and very friendly shop. I recommend this place if your need of an affordable shop."
+  },
+  {
+    "name": "Obed Feliciano",
+    "rating": 5,
+    "body": "Best service in town, they fixed my car quick and great family environment"
+  },
+  {
+    "name": "Allou Tuissindjong",
+    "rating": 5,
+    "body": "Very professional, he is very good mechanic that is taking time to explain what he is doing to fix your car. I definitely recommended his shop for your car issues"
+  },
+  {
+    "name": "shaun morris",
+    "rating": 5,
+    "body": "Kodi always takes great care of me and my vehicle. I don't go anywhere else"
+  },
+  {
+    "name": "Tommie Garcia",
+    "rating": 5,
+    "body": "And mechanic very nice may time when he was very busy to fix my car thank you"
+  },
+  {
+    "name": "Santiago Garcia",
+    "rating": 5,
+    "body": "This shop is very knowledgeable and honest! I recommend 100%"
+  },
+  {
+    "name": "Bliq",
+    "rating": 5,
+    "body": "I was very impressed and grateful for the service I received here. From the mechanic that fixed my car, Angel that helped me with the estimate and the owner Kofi were all so nice and helpful and were able to diagnose the problem and get it fixed. It was a pleasant experience and I will recommend this place to friends and family."
+  },
+  {
+    "name": "Tiffany Taylor",
+    "rating": 5,
+    "body": "I was referred to this shop by Shannon at Auto Zone. I am so glad I was! Kofi, the owner, was very professional and knowledgeable. I had my AC recharged, wheel bearings replaced, and drive shaft worked on. He and his staff were efficient. They have my car running better than ever! Definitely recommend this shop! I will definitely be back."
+  },
+  {
+    "name": "KingDDGaming",
+    "rating": 5,
+    "body": "Honestly 1 of the best auto shops in town, they give u the best prices and always go the extra mile."
+  },
+  {
+    "name": "Angel Grissom",
+    "rating": 5,
+    "body": "If you want a good place to have your vehicle worked on and to deal with really nice ppl this is the place to go."
+  },
+  {
+    "name": "Md Sikder",
+    "rating": 5,
+    "body": "This shop is awsome and they really worked good. they have excellent service and nice behavior to customers."
+  },
+  {
+    "name": "Tina Vogt",
+    "rating": 5,
+    "body": "This place is awesome, especially Kofi. We were visiting from out of town on a Saturday and our engine light came on. He stayed late in 100° heat to get us back on the road. He was very knowledgeable and explained everything to us. We were so grateful that he went above and beyond to help us."
+  },
+  {
+    "name": "Amber Coriano",
+    "rating": 5,
+    "body": "Kofi is amazing! Any time I have issues with my vehicle, he fixes it! Yes efficient, fair, honest and makes sure I understand what he is fixing along with providing knowledge for the warranties that come with my parts! I would recommend him to anyone ! I won’t take my car anywhere else!!!"
+  },
+  {
+    "name": "Jerry Moland",
+    "rating": 5,
+    "body": "My 2010 Nissan Rogue needed a headlight bulb replaced. The service and staff were amazing! The price was incredible! Not only did he change the bulb, but he cleaned my engine also and I learned a great way to clean my headlights. I actually enjoyed hanging out while my car was being repaired! I will definitely return!"
+  },
+  {
+    "name": "MW Tsegay",
+    "rating": 5,
+    "body": "Folks, I fear my words would not be enough for the guys at 23rd-n-villa autoshop. They repaired electrical and brake system of my car. Highly professional, fair price and highly efficient people. Kofi is simply an amazing and cooperative guy. Gashaw, Manuel and the rest are amazing as well. I highly recommend them."
+  },
+  {
+    "name": "Agnieszka Czaja",
+    "rating": 5,
+    "body": "I have done oil changes for the last few years here. This year, Kofi's team has also recharged ac in my car and replaced two front cv axles. They patiently explain what needs to be done and why and their pricing is reasonable. I will be back. I highly recommend them."
+  },
+  {
+    "name": "Elijah Abiara",
+    "rating": 5,
+    "body": "Great service! Consistent and Reliable for every visit in the last 2 years!"
+  },
+  {
+    "name": "Adam Ali",
+    "rating": 5,
+    "body": "On of the best auto repair shop in Oklahoma City, they did a great job on my car changing the control arms, and oil change. The staff were very professional and fast. I highly recommend this affordable amazing place! Thank you for the awesome work! I will be coming here for all my car repairs!"
+  },
+  {
+    "name": "Haley Ruffner",
+    "rating": 5,
+    "body": "I was alone in OKC on a work trip when my check engine light came on for a code related to a thermostat/coolant temp sensor. The autozone down the road who sold me my code reader recommended 23rd and Villa, and they were excellent. They got me right in, diagnosed the problem, and fixed it the same day, all at a super reasonable price. Kofi explained everything to me and didn't make me feel stupid for not knowing anything about cars. I'm so grateful for their service!"
+  },
+  {
+    "name": "Riley Harkey",
+    "rating": 5,
+    "body": "The staff was very friendly and knowledgeable. As a woman you walk in assuming a mechanic is going to try and pull one over on you, but this was not the case. They explained things and tried to get me the best deal possible. I will definitely be back! They have earned my trust."
+  },
+  {
+    "name": "John Mickelthwate",
+    "rating": 5,
+    "body": "Kofi is the best. Trustworthy and reliant."
+  },
+  {
+    "name": "Nikki Buckles",
+    "rating": 5,
+    "body": "Kofi is by far the best owner I have ever met Alan automotive place! I really enjoy his hard work & honesty. By far the best pricing and quick work too!"
+  },
+  {
+    "name": "Moyosoreoluwa Bello",
+    "rating": 5,
+    "body": "Kofi gives the best customer service to his clients . Pays attention to details and goes extras miles in delivering services to customers . I recommend him any day at anytime for your auto fix .👌🏾"
+  },
+  {
+    "name": "Amanda Luera",
+    "rating": 5,
+    "body": "Brought my car for several repairs kofi and Angel the service advisor are amazing individuals very warming, inviting and make you feel at home when servicing your vehicle. I have enjoyed bringing my vehicle to this shop and highly recommend !! Thank you guys you are Awesome!!"
+  },
+  {
+    "name": "Brett Ross",
+    "rating": 5,
+    "body": "I had a great experience with Kofi. They got my vehicle fixed fast and efficiently."
+  },
+  {
+    "name": "Sylus Boykin",
+    "rating": 5,
+    "body": "Kofi is a great mechanic owner and person his shop has one of the hardest working cruise I know and he’s a very honest person and he worked on my car and it took him one day and he got it back to me in perfect running condition."
+  },
+  {
+    "name": "Isaiah",
+    "rating": 5,
+    "body": "Excellent service, fast and quality repair!"
+  },
+  {
+    "name": "Derek Lehman",
+    "rating": 5,
+    "body": "Kofi took my car in very last minute on a weekend. Rarely will you find service like that. Great guy. Would recommend him for any automotive needs!"
+  },
+  {
+    "name": "brittany hrdlicka wilson",
+    "rating": 5,
+    "body": "I take all my cars here. He takes care of us, everytime with any car. We will keep coming back."
+  },
+  {
+    "name": "BJ Bryant",
+    "rating": 5,
+    "body": "Olvin has been my mechanic over 10 years. I trust any vehicle with him and his team. Very honest, transparent and courteous. I highly recommend 23RD-N-Villa Automotive for your vehicle repair & maintenance needs!"
+  },
+  {
+    "name": "Dominique Thompson",
+    "rating": 5,
+    "body": "You'll find everyone to be really helpful here! Amazing attitude, great service from the shop to the front desk! This is the place to go if you want honest work done on your car! Really reputable shop if I might say so myself!"
+  },
+  {
+    "name": "Ken Ndekezi",
+    "rating": 5,
+    "body": "Hands down had to be my best experience with repairing my car. The owner and team were so welcoming and got me out of there in an under an hour. Highly recommended!"
+  },
+  {
+    "name": "Deana Nichols",
+    "rating": 5,
+    "body": "My A/C wasn't blowing cold & they immediately got me in & done! They are honest & took time to explain everything w/my car. I will recommend & definitely be back. A+++++!"
+  },
+  {
+    "name": "Heather Yarbrough",
+    "rating": 5,
+    "body": "Over all experience was great! He was honest and did not try to get over on me due to being a female! He handled the job quickly and communication was excellent! I would recommend any one to his business! He has a great staff as well!"
+  },
+  {
+    "name": "Macaulay Chtay",
+    "rating": 5,
+    "body": "Owner cares about his customers! Pulled in the lot just to ask a question about my window, they had me fixed up and out in an hour and they went above and beyond. Everyone there was beyond helpful!"
+  },
+  {
+    "name": "Christopher Patten",
+    "rating": 5,
+    "body": "Absolutely FANTASTIC service, both on my car, and personally. They are very knowledgeable, trustworthy, and love helping people out. Kofi is the man."
+  },
+  {
+    "name": "James Landoll",
+    "rating": 5,
+    "body": "My truck died on 23rd street right in front of the shop. the owner stopped what he was doing and helped me get it running so I could get it out of the street. Helpful, professional, and refused to take any cash. Class act. I would definitely recommend."
+  },
+  {
+    "name": "Joseph Mcdonald",
+    "rating": 5,
+    "body": "Family owned and operated doing complete automotive repairs mechanical or paint and body. Dont make a mistake by calling the wrong guys like pep boys . 23rd& villa automotive will give you the best price for the repair at hand with no hidden fees. While your repairs are being done say hello to the exotic birds in the waiting room."
+  },
+  {
+    "name": "Tom Morgan",
+    "rating": 5,
+    "body": "Very friendly, very knowledgeable. Kofi always tries to find the best parts for your repair. Plus he sells cars too!"
+  },
+  {
+    "name": "Kara Lewis",
+    "rating": 5,
+    "body": "Absolutely Amazing service. Before you leave you will have understanding about your car. They explain and answer any questions. This is a place you can trust."
+  },
+  {
+    "name": "Christabel Nguju",
+    "rating": 5,
+    "body": "This place is an amazing place and I recommend this Place to everyone they have a great car service and if you are wondering about your car problem I promise you Kofi will figure it out for you. I give this place a 100%."
+  },
+  {
+    "name": "Javar Whittington",
+    "rating": 5,
+    "body": "Great place to get your car fixed. I received an itemized bill, they were done on time, friendly customer service, and a drink was even offered to me while I waited."
+  },
+  {
+    "name": "Mary King",
+    "rating": 5,
+    "body": "This place is great! Fast, inexpensive and good service. Kofi is knowledgeable and reliable. I highly recommend this mechanic."
+  },
+  {
+    "name": "Mark Handy",
+    "rating": 5,
+    "body": "I took my 2000 Wrangler TJ to these guys to tune and repair the clutch The Jeep now runs the best it has since it was new... Highly recommend this business they are OUTSTANDING"
+  },
+  {
+    "name": "Victoria Romo",
+    "rating": 5,
+    "body": "Highly Recommend This Repair Shop. When In Need Of A Car Repair Kofi Is The Guy. Very Professional And Will Get The Job Done Fast. Always There For My Needs."
+  },
+  {
+    "name": "Kay Crook",
+    "rating": 5,
+    "body": "Good job"
+  },
+  {
+    "name": "Elaine Brown",
+    "rating": 5,
+    "body": "Love working with Kofi. An honest, competent mechanic. You will always be treated well. Services: Brakes, Auto engine diagnostic, Oil change, A/C recharge, General repairs & maintenance, Auto glass repair"
+  },
+  {
+    "name": "Tammi Georgianna",
+    "rating": 5,
+    "body": "They keep my old car going. Good pricing. Friendly staff."
+  },
+  {
+    "name": "Livin Bren",
+    "rating": 5,
+    "body": "Got some work done by them and they did a good job for a fair price."
+  },
+  {
+    "name": "carterbroadway39",
+    "rating": 5,
+    "body": "Olvin the owner known for many years and is a good and honest worker. Definatly recommend him. - Bryan AM Certifit Auto"
+  },
+  {
+    "name": "David Williams",
+    "rating": 5,
+    "body": "I have known Olvin for several years. He and his crew always do great work at a fair price."
+  },
+  {
+    "name": "Felicia Brackens",
+    "rating": 5,
+    "body": "Quick and very nice"
+  },
+  {
+    "name": "Marcus Haley",
+    "rating": 5,
+    "body": "I had a great customer experience, very dependable and professional job, these guys have my business as long as they are here , 5 stars definitely"
+  },
+  {
+    "name": "FRANK OWUSU",
+    "rating": 5,
+    "body": "Very smart mechanic and pricing very reasonable"
+  },
+  {
+    "name": "Ron reacts Ron",
+    "rating": 5,
+    "body": "Replaced my engine in 2 days with no problem gave me a loaner car great man Positive: Professionalism, Punctuality, Quality, Value"
+  },
+  {
+    "name": "kd lawrence",
+    "rating": 5,
+    "body": "Kofi and his crew are professionals and hsce great customer service."
+  },
+  {
+    "name": "Ngosong Clinton",
+    "rating": 5,
+    "body": "23rd N villa Automative is a place to be, good customer service, if you have a problem they can’t fix, the refer you to someone that can handle your issues. You guys are the best"
+  },
+  {
+    "name": "Cindi Gould",
+    "rating": 5,
+    "body": "Did great work on our automobile at a great price."
+  },
+  {
+    "name": "Jennifer Anderson",
+    "rating": 5,
+    "body": "Amazing customer service 👏 👌 🙌"
+  },
+  {
+    "name": "Shundricka Love",
+    "rating": 5,
+    "body": "Highly Recommend this place!!! Great friendly service that I can trust."
+  },
+  {
+    "name": "Marcus Robertson",
+    "rating": 5,
+    "body": "Supremely knowledgeable owner with advanced engineering degree and military background. Very nice, approachable staff. Fast work."
+  },
+  {
+    "name": "Juan Casaigne",
+    "rating": 5,
+    "body": "Honest Work and service!!!! and was surprised they cleaned my car and engine. Highly recommend!!!!! Positive: Professionalism, Punctuality, Quality, Value"
+  },
+  {
+    "name": "Christi",
+    "rating": 5,
+    "body": "They got my car back on the road, and went above expectations and detailed my car too."
+  },
+  {
+    "name": "Aikken Labretin",
+    "rating": 5,
+    "body": "ABSOLUTELY BEST SHOP IN ALL OF OKC METRO AMAZING SERVICE VAST KNOWLEDGE SUPER PEOPLE AAAAAAAAAA+"
+  },
+  {
+    "name": "Ronnie Huber",
+    "rating": 5,
+    "body": "Checked & charged my ac. Didn't get to deep in my pocket"
+  },
+  {
+    "name": "Kaleshia Freeman",
+    "rating": 5,
+    "body": "Very nice receptionist! Speedy service ! Would recommend"
+  },
+  {
+    "name": "jessi sweet",
+    "rating": 5,
+    "body": "Been coming for years. Always kind, sweet, and caring. Go to them!"
+  },
+  {
+    "name": "Tigist Tadesse",
+    "rating": 5,
+    "body": "Omg typo first post this shop is very professional honest guys that know what they are doing THANKSSS so much for fixing my car the right way I will be bringing all my cars here"
+  },
+  {
+    "name": "Ms Sarah Oloba",
+    "rating": 5,
+    "body": "Amazing gentleman. Fixed my A/c issue . Would highly recommend. Positive: Professionalism, Punctuality, Quality, Value"
+  },
+  {
+    "name": "Adrian Gordon",
+    "rating": 5,
+    "body": "Kofi and his team are excellent! Positive: Professionalism, Punctuality, Quality, Value"
+  },
+  {
+    "name": "Chris Shanholtzer",
+    "rating": 5,
+    "body": "Great service great people the price is also great this is the place to go people"
+  },
+  {
+    "name": "Aaron Guy",
+    "rating": 5,
+    "body": "Very helpful and honest.. polite and professional."
+  },
+  {
+    "name": "aaron zobisch",
+    "rating": 5,
+    "body": "Great people friendly always profession and honest"
+  },
+  {
+    "name": "Averil Tabotndip",
+    "rating": 5,
+    "body": "Very polite, time conscious and efficient"
+  },
+  {
+    "name": "Adebisi Odina",
+    "rating": 5,
+    "body": "Awesome and honest service"
+  },
+  {
+    "name": "Ade Onibs",
+    "rating": 5,
+    "body": "Awesome customer service"
+  },
+  {
+    "name": "Kelvis Dindy",
+    "rating": 5,
+    "body": "Good"
+  },
+  {
+    "name": "Mica Warren",
+    "rating": 5,
+    "body": "Super"
+  },
+  {
+    "name": "Lionel Masango",
+    "rating": 5,
+    "body": "Good people"
+  },
+  {
+    "name": "fernando alvarez",
+    "rating": 5,
+    "body": "Good job!!"
+  },
+  {
+    "name": "Alberta A",
+    "rating": 5,
+    "body": "Services: Brakes, Auto engine diagnostic, General repairs & maintenance, Auto exhaust system repair, Auto A/C replacement, Oil change, Auto A/C service"
+  },
+  {
+    "name": "Kenneth Dowuona",
+    "rating": 5,
+    "body": "Services: Brakes, Auto engine diagnostic, General repairs & maintenance"
+  },
+  {
+    "name": "David Short",
+    "rating": 5,
+    "body": "Services: Auto engine diagnostic, General repairs & maintenance"
+  },
+  {
+    "name": "Becky Estep - Credit Coach Queen",
+    "rating": 5,
+    "body": "Positive: Quality, Professionalism, Value I appreciate the time they took to inspect my vehicle, explain what needed to be done and the value. No up selling on unnecessary parts/services. Honest and great communication! They definitely care about their customers. Highly recommend!"
+  },
+  {
+    "name": "Nakkita Love",
+    "rating": 5,
+    "body": "Services: General repairs & maintenance"
+  },
+  {
+    "name": "Benjamin Green",
+    "rating": 4,
+    "body": "Very trustworthy and knowledgeable staff, precise in estimates and job completion times, conveniently located at the corner of villa and nw 23rd, directly across from shepherds mall. I would recommend this repair shop for a number of different reasons"
+  },
+  {
+    "name": "Darrell Moore",
+    "rating": 4,
+    "body": "Positive: Punctuality, Quality, Professionalism, Value I would definitely recommend this automotive repair shop. The staff is very courteous, professional, and knowledgeable. The quality of work is excellent, and the prices are reasonable. I will definitely be a return customer."
+  },
+  {
+    "name": "Wonder Wonderful",
+    "rating": 2,
+    "body": "I'm not ready to give a review right now there are still some things to work out with this business."
+  },
+  {
+    "name": "Aron Barrios",
+    "rating": 2,
+    "body": "Well, they do the work, but the interest in the client has decreased considerably. It is no longer the same as 5 years ago, when there was more passion. Translated by Google ・ See original (Spanish)"
+  },
+  {
+    "name": "Lluvia Martinez",
+    "rating": 1,
+    "body": "Had to come back twice did nothing to my ac but charge me twice when they said it would work perfectly and still doing the same thing do not recommend."
+  },
+  {
+    "name": "Tyler Adams (RP_TDams)",
+    "rating": 1,
+    "body": "Woman at the desk is rude and unprofessional. Watched her run a customer off, watched her ignore the phone and have attitude on phone with customer. Kofi is a great guy the mechanics he has does their job but the old ones were more helpful and thorough."
+  },
+  {
+    "name": "Valerio Costilla",
+    "rating": 1,
+    "body": "This place is a nightmare. If you’re looking for an honest, reliable, and trustworthy place to have your car repaired, avoid this place. A “one-week” job ended up lasting four (4) entire weeks. When I finally got my car back, they had fixed the wrong things and charged me for it. They also damaged my car in the process. I had to take it to another mechanic to get it fixed properly. I would never recommend this place to anyone."
+  },
+  {
+    "name": "Chase",
+    "rating": 1,
+    "body": "I took my car in on 2/14/2020 for overheating and he charged me $648 Returned the car back to me and it overheated. I called several times and no answer finally I showed up and he gave several excuses as to why he didn't answer. several other people showed up with the same issue of their cars not being repaired correctly and having the same issue after they were charged. This man is a scam artist. Avoid this place at all costs."
+  },
+  {
+    "name": "niki heldenbrand",
+    "rating": 1,
+    "body": "Terrible service!! Had to take my husbands car back twice now for the same issue and it is still overheating. Never got a call when it was ready for pick up both times we took it in (for the same issue that STILL is not fixed) Left a message for the manager to call me back 4 days ago and still have yet to receive a phone call. Horrible communication and terrible service. I would never recommend this place to anyone!"
+  },
+  {
+    "name": "viajero chapin el pelon",
+    "rating": 1,
+    "body": "Screwed my brother over by making him change his engine for a worse quality engine and didn't refund/ recompesate for his fault"
+  },
+  {
+    "name": "lonnie black",
+    "rating": 1,
+    "body": "Charges people for work not needing to be done, to automobile this is from experience nothing heard. Enter at your own risk."
+  },
+  {
+    "name": "rkamunyu",
+    "rating": 1,
+    "body": "They will overcharge you. Better yet turn your vehicle into junk. Don’t go here!!! Services: Brakes, Auto engine diagnostic, General repairs & maintenance, Auto exhaust system repair, Auto A/C replacement, Oil change, Auto A/C service"
+  },
+  {
+    "name": "Mark Barber",
+    "rating": 3,
+    "body": "Not bad"
+  }
+]
 
     // Review rendering
     let shownCount = 4;
