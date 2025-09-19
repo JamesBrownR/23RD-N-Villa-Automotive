@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>23RD-N-Villa Automotive</title>
+  <meta name="description" content="23RD-N-Villa Automotive — Auto repair in Oklahoma City. Call +1 (405) 600-4422" />
+  <style>
+    :root{
+      --blue-600:#0b67d0;
+      --blue-700:#0958b8;
+      --blue-50:#f5f9ff;
+      --muted:#6b7280;
+      --card-bg: #ffffff;
+      --accent:#0b67d0;
+      --accent-2:#0a5bb0;
+      --shadow: 0 6px 20px rgba(12, 36, 80, 0.08);
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--blue-50),#fff 40%);
+      color:#0f1724;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* layout */
+    .container{max-width:var(--max-width);margin:20px auto;padding:16px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--blue-600),var(--blue-700));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:var(--shadow)
+    }
+    h1{margin:0;font-size:20px}
+    .top-actions{display:flex;gap:12px;align-items:center}
+    .phone-pill{background:white;padding:8px 12px;border-radius:999px;display:flex;gap:10px;align-items:center;box-shadow:var(--shadow)}
+    .phone-pill a{color:var(--blue-700);font-weight:600;text-decoration:none}
+    .call-now{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .call-now:active{transform:translateY(1px)}
+
+    /* grid */
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px}
+    @media (max-width:880px){ .grid{grid-template-columns:1fr} .top-actions{flex-wrap:wrap} }
+
+    /* main card */
+    .card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
+    .hero{display:flex;gap:18px;align-items:flex-start}
+    .hero .left{flex:1}
+    .hero h2{margin:0 0 6px 0}
+    .meta{color:var(--muted);font-size:14px}
+    .hours{margin-top:10px}
+    .hours li{list-style:none;padding:4px 0;font-size:14px}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+    .gallery img{width:100%;height:110px;object-fit:cover;border-radius:8px}
+    @media (max-width:600px){.gallery{grid-template-columns:repeat(2,1fr)} .gallery img{height:90px}}
+
+    /* map */
+    .map-embed{width:100%;height:320px;border:0;border-radius:10px;overflow:hidden;margin-top:12px}
+
+    /* contact box */
+    .contact-box .label{font-weight:700;margin-bottom:6px}
+    .contact-box input,.contact-box textarea,.contact-box select{
+      width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-bottom:8px;font-size:14px
+    }
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;border:none;cursor:pointer;font-weight:600}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+
+    /* reviews */
+    .reviews-list{display:grid;gap:8px}
+    .review{
+      display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfdff);
+      border:1px solid #eef3ff;font-size:14px
+    }
+    .rev-avatar{width:44px;height:44px;border-radius:999px;background:#e6f0ff;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--blue-700)}
+    .stars{color:#f5b334;font-weight:700;letter-spacing:1px}
+    .rev-meta{font-weight:700}
+    .rev-body{color:var(--muted);font-size:13px}
+
+    .show-more-wrap{display:flex;justify-content:center;margin-top:10px}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px;padding:12px 0}
+    .small{font-size:13px;color:var(--muted)}
+    .badge{display:inline-block;background:#e8f1ff;padding:6px 10px;border-radius:999px;font-weight:700;color:var(--blue-700)}
+    /* utility */
+    .muted{color:var(--muted)}
+    .flex{display:flex;gap:10px;align-items:center}
+    a{text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">23N</div>
+        <div>
+          <h1>23RD-N-Villa Automotive</h1>
+          <div class="muted">2420 NW 23rd St, Oklahoma City, OK 73107</div>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <div class="phone-pill">
+          <div style="font-weight:700">Open</div>
+          <div style="color:var(--muted)">Mon–Sat</div>
+          <div style="margin-left:8px">|</div>
+          <!-- Click-to-call link -->
+          <a href="tel:+14056004422" aria-label="Call 23RD-N-Villa Automotive">+1 (405) 600-4422</a>
+        </div>
+
+        <!-- prominent call button -->
+        <a class="call-now" href="tel:+14056004422" aria-label="Call now">Call Now</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <!-- main column -->
+      <main>
+        <section class="card hero" aria-labelledby="services-heading">
+          <div class="left">
+            <h2 id="services-heading">Trusted Auto Repair in Oklahoma City</h2>
+            <div class="meta">ASE-like technicians • Engine, AC, brakes, diagnostics • Over X years serving local customers</div>
+
+            <ul class="hours" aria-label="Business hours">
+              <li><strong>Friday</strong> 8 AM – 6 PM</li>
+              <li><strong>Saturday</strong> 8 AM – 2:30 PM</li>
+              <li><strong>Sunday</strong> Closed</li>
+              <li><strong>Monday</strong> 8 AM – 6 PM</li>
+              <li><strong>Tuesday</strong> 8 AM – 6 PM</li>
+              <li><strong>Wednesday</strong> 8 AM – 6 PM</li>
+              <li><strong>Thursday</strong> 8 AM – 6 PM</li>
+            </ul>
+
+            <p class="small muted">Services: Engine repair • AC • Brakes • Diagnostics • Tire service • Oil change</p>
+
+            <!-- gallery -->
+            <div class="gallery" id="gallery">
+              <!-- Replace these src's with your real images in /assets/ (see comments below) -->
+              <img src="assets/car1.jpg" alt="Shop photo 1" onerror="this.style.visibility='hidden'">
+              <img src="assets/car2.jpg" alt="Shop photo 2" onerror="this.style.visibility='hidden'">
+              <img src="assets/car3.jpg" alt="Shop photo 3" onerror="this.style.visibility='hidden'">
+              <img src="assets/car4.jpg" alt="Shop photo 4" onerror="this.style.visibility='hidden'">
+              <img src="assets/car5.jpg" alt="Shop photo 5" onerror="this.style.visibility='hidden'">
+              <img src="assets/car6.jpg" alt="Shop photo 6" onerror="this.style.visibility='hidden'">
+            </div>
+
+            <!-- map -->
+            <iframe
+              title="23RD-N-Villa Automotive map"
+              class="map-embed"
+              src="https://www.google.com/maps/place/23RD-N-Villa+Automotive/@35.492934,-97.8608108,11z/data=!4m10!1m2!2m1!1sauto+fix+oklahoma+midwest+city!3m6!1s0x87b210900b44b91b:0x304ad3b7bc23abee!8m2!3d35.492934!4d-97.5559402!15sCh5hdXRvIGZpeCBva2xhaG9tYSBtaWR3ZXN0IGNpdHlaICIeYXV0byBmaXggb2tsYWhvbWEgbWlkd2VzdCBjaXR5kgEQYXV0b19yZXBhaXJfc2hvcJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyMDFjV0pIYkVKaE0wNTRVek5DVGxkVk9IaE5WR2hzVmpCUmVrMHlZeEFCqgF7CgcvbS8wazRqCggvbS8wMW4zMgoIL20vMDVtcGgKCC9tLzB6OGw3EAEqDCIIYXV0byBmaXgoADIeEAEiGiRoAELkPCsbuFnzZO0PTsMYlz3cl2Lfdu0VMiIQAiIeYXV0byBmaXggb2tsYWhvbWEgbWlkd2VzdCBjaXR54AEA-gEECA8QSQ!16s%2Fg%2F11bx2kh27q?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <!-- Reviews -->
+            <div style="margin-top:16px">
+              <h3>Customer Reviews</h3>
+              <div id="reviews" class="reviews-list" aria-live="polite"></div>
+              <div class="show-more-wrap">
+                <button id="showMoreBtn" class="btn secondary">Show more</button>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- instructions / notes -->
+        <section style="margin-top:12px">
+          <div class="card">
+            <h3>Notes / Setup</h3>
+            <ul>
+              <li class="small">Replace placeholder images in <code>/assets/</code> (e.g., <code>assets/car1.jpg</code>) with your real photos.</li>
+              <li class="small">Contact form has a placeholder endpoint — find the comment <code>/* REPLACE FORM_ENDPOINT */</code> inside the script and replace <code>FORM_ENDPOINT</code> with your form processor URL (e.g., Formspree or your server).</li>
+              <li class="small">Square Location ID: search for <code>YOUR_LOCATION_ID</code> in this file and replace it with the real Square location id when ready (the placeholder is only in a comment so you can find it easily).</li>
+            </ul>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- sidebar -->
+      <aside>
+        <div class="card contact-box">
+          <div class="label">Contact & Appointments</div>
+          <div class="small muted">Call for same-day estimates</div>
+
+          <form id="contactForm" onsubmit="submitForm(event)">
+            <label class="label small">Name</label>
+            <input type="text" name="name" required placeholder="Your name">
+
+            <label class="label small">Email</label>
+            <input type="email" name="email" required placeholder="you@example.com">
+
+            <label class="label small">Phone</label>
+            <input type="tel" name="phone" placeholder="+1 (555) 123-4567">
+
+            <label class="label small">Message</label>
+            <textarea name="message" rows="4" placeholder="Describe the issue or request" required></textarea>
+
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <button class="btn" type="submit">Send</button>
+              <a class="btn secondary" href="mailto:info@23rdn-villa-auto.example?subject=Appointment%20Request">Email</a>
+            </div>
+
+            <p id="formStatus" class="small muted" style="margin-top:8px"></p>
+          </form>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid #f0f3fb">
+
+          <div>
+            <div class="small" style="font-weight:700;margin-bottom:6px">Quick Actions</div>
+            <div class="flex" style="flex-direction:column;align-items:flex-start">
+              <a class="btn" href="tel:+14056004422">Call +1 (405) 600-4422</a>
+              <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=23RD-N-Villa+Automotive+Oklahoma+City" target="_blank">Open directions</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- small info card -->
+        <div class="card" style="margin-top:12px">
+          <div class="badge">Open • Local</div>
+          <p class="small muted" style="margin-top:8px">Address: 2420 NW 23rd St, Oklahoma City, OK 73107</p>
+          <p class="small muted">Phone: <a href="tel:+14056004422">+1 (405) 600-4422</a></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© <strong>23RD-N-Villa Automotive</strong> — Oklahoma City</div>
+      <div class="small muted">Built for GitHub Pages — replace assets and endpoints before publishing</div>
+    </footer>
+  </div>
+
+  <script>
+    /**************************************************************************
+     * REVIEWS DATA
+     *
+     * Paste your reviews here as a JavaScript array of objects.
+     * Exact structure must be preserved. Example compressed format:
+     * [
+     *  { name: "Reviewer 1", rating: 5, body: "" },
+     *  { name: "Reviewer 2", rating: 5, body: "" },
+     *  ...
+     * ]
+     *
+     * IMPORTANT:
+     * - Do NOT change the object keys (name, rating, body).
+     * - Keep reviews in this exact format. The renderer will display the stars
+     *   and the body as provided. If body is empty, it will render only the name and stars.
+     *
+     * NOTE FOR NON-5-STAR REVIEWS:
+     * You told me there are a few non-5-star reviews; do not include them here
+     * unless you intend them to appear on the site. When you paste the array,
+     * the site will render them exactly as you paste them.
+     *
+     * Replace the sample entries below with your real reviews.
+     **************************************************************************/
+
+    const reviews = [
+      { name: "Reviewer 1", rating: 5, body: "" },
+      { name: "Reviewer 2", rating: 5, body: "" },
+      { name: "Reviewer 3", rating: 5, body: "" },
+      { name: "Reviewer 4", rating: 5, body: "" },
+      { name: "Reviewer 5", rating: 5, body: "" },
+      { name: "Reviewer 6", rating: 5, body: "" },
+      { name: "Reviewer 7", rating: 5, body: "" },
+      { name: "Reviewer 8", rating: 5, body: "" },
+      { name: "Reviewer 9", rating: 5, body: "" },
+      { name: "Reviewer 10", rating: 5, body: "" },
+      { name: "Reviewer 11", rating: 5, body: "" },
+      { name: "Reviewer 12", rating: 5, body: "" },
+      { name: "Reviewer 13", rating: 5, body: "" }
+    ];
+
+    /* Helper to render star string from rating */
+    function renderStars(r) {
+      const full = "★".repeat(Math.max(0, Math.min(5, Math.round(r))));
+      const empty = "☆".repeat(5 - full.length);
+      return full + empty;
+    }
+
+    // Reviews render logic: show N initially, reveal 6 more per click
+    let shownCount = 6;
+    const chunkSize = 6;
+    const reviewsContainer = document.getElementById('reviews');
+    const showMoreBtn = document.getElementById('showMoreBtn');
+
+    function renderReviews() {
+      reviewsContainer.innerHTML = '';
+      const toShow = reviews.slice(0, shownCount);
+      toShow.forEach(r => {
+        const div = document.createElement('div');
+        div.className = 'review';
+        div.innerHTML = `
+          <div class="rev-avatar" aria-hidden="true">${(r.name || 'U').split(' ').map(s=>s[0]).slice(0,2).join('')}</div>
+          <div style="flex:1">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div class="rev-meta">${escapeHtml(r.name || 'Anonymous')}</div>
+              <div class="stars" aria-label="${r.rating} out of 5">${renderStars(r.rating)}</div>
+            </div>
+            <div class="rev-body">${escapeHtml(r.body || '')}</div>
+          </div>
+        `;
+        reviewsContainer.appendChild(div);
+      });
+
+      // Update show more button text and visibility
+      if (shownCount >= reviews.length) {
+        showMoreBtn.style.display = 'none';
+      } else {
+        showMoreBtn.style.display = 'inline-block';
+        const remaining = reviews.length - shownCount;
+        const nextReveal = Math.min(chunkSize, remaining);
+        showMoreBtn.textContent = `Show ${nextReveal} more`;
+      }
+    }
+
+    showMoreBtn.addEventListener('click', () => {
+      shownCount += chunkSize;
+      renderReviews();
+      // scroll to newly revealed area smoothly
+      setTimeout(()=> {
+        const last = reviewsContainer.children[Math.min(shownCount-1, reviewsContainer.children.length-1)];
+        if (last) last.scrollIntoView({behavior:'smooth', block:'nearest'});
+      }, 100);
+    });
+
+    // basic XSS-safe text insertion
+    function escapeHtml(s) {
+      if (!s) return '';
+      return String(s)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    // Init render
+    renderReviews();
+
+
+    /**************************************************************************
+     * CONTACT FORM HANDLING
+     *
+     * The form will attempt to POST to a server endpoint. Replace FORM_ENDPOINT
+     * with your real endpoint (e.g., a Formspree URL or your API route).
+     *
+     * If no endpoint is provided, the script will open a mailto: fallback.
+     *
+     * IMPORTANT: find the string "FORM_ENDPOINT" to replace it with your URL.
+     **************************************************************************/
+
+    async function submitForm(ev) {
+      ev.preventDefault();
+      const form = ev.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        message: form.message.value,
+        submitted_at: new Date().toISOString()
+      };
+
+      const statusEl = document.getElementById('formStatus');
+      statusEl.textContent = 'Sending…';
+
+      // Replace this placeholder with your form endpoint:
+      const FORM_ENDPOINT = ""; // <-- REPLACE FORM_ENDPOINT with your POST endpoint (e.g. https://formspree.io/f/xxxx)
+
+      if (!FORM_ENDPOINT) {
+        // mailto fallback
+        const subject = encodeURIComponent(`Website contact from ${data.name}`);
+        const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\n\nMessage:\n${data.message}`);
+        window.location.href = `mailto:info@23rdn-villa-auto.example?subject=${subject}&body=${body}`;
+        statusEl.textContent = 'Opened mail app (fallback).';
+        return;
+      }
+
+      try {
+        const res = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (res.ok) {
+          statusEl.textContent = 'Message sent — we will get back to you shortly.';
+          form.reset();
+        } else {
+          statusEl.textContent = 'Server error. Please call or email directly.';
+        }
+      } catch (err) {
+        console.error(err);
+        statusEl.textContent = 'Network error. Please try emailing or calling.';
+      }
+    }
+
+    /**************************************************************************
+     * SQUARE LOCATION ID Placeholder
+     *
+     * If/when you integrate Square payments or appointment widgets, replace
+     * YOUR_LOCATION_ID with your actual Square location id.
+     *
+     * Example comment so you can find it in the file: "/* REPLACE YOUR_LOCATION_ID * /"
+     **************************************************************************/
+
+    // /* REPLACE YOUR_LOCATION_ID */
+
+  </script>
+</body>
+</html>
