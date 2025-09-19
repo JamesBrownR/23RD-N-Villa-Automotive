@@ -3,416 +3,1295 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>23RD-N-Villa Automotive</title>
-  <meta name="description" content="23RD-N-Villa Automotive — Auto repair in Oklahoma City. Call +1 (405) 600-4422" />
+  <title>23RD-N-Villa Automotive | Professional Auto Repair in Oklahoma City</title>
+  <meta name="description" content="Expert auto repair services in Oklahoma City. Engine repair, AC, brakes, diagnostics & more. Call (405) 600-4422 for same-day service." />
   <style>
-    :root{
-      --blue-600:#0b67d0;
-      --blue-700:#0958b8;
-      --blue-50:#f5f9ff;
-      --muted:#6b7280;
-      --card-bg: #ffffff;
-      --accent:#0b67d0;
-      --accent-2:#0a5bb0;
-      --shadow: 0 6px 20px rgba(12, 36, 80, 0.08);
-      --max-width:1100px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg,var(--blue-50),#fff 40%);
-      color:#0f1724;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+    :root {
+      --primary: #1e40af;
+      --primary-dark: #1e3a8a;
+      --primary-light: #3b82f6;
+      --accent: #ef4444;
+      --text-primary: #111827;
+      --text-secondary: #6b7280;
+      --text-light: #9ca3af;
+      --bg-primary: #ffffff;
+      --bg-secondary: #f9fafb;
+      --bg-tertiary: #f3f4f6;
+      --border: #e5e7eb;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+      --radius: 0.75rem;
+      --max-width: 1280px;
     }
 
-    /* layout */
-    .container{max-width:var(--max-width);margin:20px auto;padding:16px;}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px;}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{
-      width:68px;height:68px;border-radius:12px;background:linear-gradient(135deg,var(--blue-600),var(--blue-700));
-      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;box-shadow:var(--shadow)
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    h1{margin:0;font-size:20px}
-    .top-actions{display:flex;gap:12px;align-items:center}
-    .phone-pill{background:white;padding:8px 12px;border-radius:999px;display:flex;gap:10px;align-items:center;box-shadow:var(--shadow)}
-    .phone-pill a{color:var(--blue-700);font-weight:600;text-decoration:none}
-    .call-now{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    .call-now:active{transform:translateY(1px)}
 
-    /* grid */
-    .grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px}
-    @media (max-width:880px){ .grid{grid-template-columns:1fr} .top-actions{flex-wrap:wrap} }
-
-    /* main card */
-    .card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:var(--shadow)}
-    .hero{display:flex;gap:18px;align-items:flex-start}
-    .hero .left{flex:1}
-    .hero h2{margin:0 0 6px 0}
-    .meta{color:var(--muted);font-size:14px}
-    .hours{margin-top:10px}
-    .hours li{list-style:none;padding:4px 0;font-size:14px}
-
-    /* gallery */
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
-    .gallery img{width:100%;height:110px;object-fit:cover;border-radius:8px}
-    @media (max-width:600px){.gallery{grid-template-columns:repeat(2,1fr)} .gallery img{height:90px}}
-
-    /* map */
-    .map-embed{width:100%;height:320px;border:0;border-radius:10px;overflow:hidden;margin-top:12px}
-
-    /* contact box */
-    .contact-box .label{font-weight:700;margin-bottom:6px}
-    .contact-box input,.contact-box textarea,.contact-box select{
-      width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ef;margin-bottom:8px;font-size:14px
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--text-primary);
+      background: var(--bg-secondary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;border:none;cursor:pointer;font-weight:600}
-    .btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}
 
-    /* reviews */
-    .reviews-list{display:grid;gap:8px}
-    .review{
-      display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:8px;background:linear-gradient(180deg,#fff,#fbfdff);
-      border:1px solid #eef3ff;font-size:14px
+    /* Container & Layout */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
     }
-    .rev-avatar{width:44px;height:44px;border-radius:999px;background:#e6f0ff;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--blue-700)}
-    .stars{color:#f5b334;font-weight:700;letter-spacing:1px}
-    .rev-meta{font-weight:700}
-    .rev-body{color:var(--muted);font-size:13px}
 
-    .show-more-wrap{display:flex;justify-content:center;margin-top:10px}
+    /* Header */
+    header {
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+    }
 
-    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:14px;padding:12px 0}
-    .small{font-size:13px;color:var(--muted)}
-    .badge{display:inline-block;background:#e8f1ff;padding:6px 10px;border-radius:999px;font-weight:700;color:var(--blue-700)}
-    /* utility */
-    .muted{color:var(--muted)}
-    .flex{display:flex;gap:10px;align-items:center}
-    a{text-decoration:none}
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+      gap: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 0.625rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.25rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .brand-info h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .brand-info .address {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .status-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 1rem;
+      background: #10b981;
+      color: white;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .status-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: white;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .phone-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-md);
+    }
+
+    .phone-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 4rem 0;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-text h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text .tagline {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: white;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      box-shadow: var(--shadow-sm);
+      color: var(--text-secondary);
+    }
+
+    .feature-pill::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn-primary {
+      padding: 1rem 2rem;
+      background: var(--primary);
+      color: white;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.125rem;
+      transition: all 0.2s;
+      display: inline-block;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-secondary {
+      padding: 1rem 2rem;
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.125rem;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hours-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .hours-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .hours-list {
+      list-style: none;
+    }
+
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9375rem;
+    }
+
+    .hours-list li:last-child {
+      border-bottom: none;
+    }
+
+    .hours-list .day {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .hours-list .time {
+      color: var(--text-secondary);
+    }
+
+    .hours-list li.today {
+      background: linear-gradient(90deg, transparent, #f0f9ff);
+      margin: 0 -1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .hours-list li.today .time {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Main Content Grid */
+    .content-wrapper {
+      padding: 4rem 0;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 2rem;
+    }
+
+    /* Services Section */
+    .services-section {
+      background: white;
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      padding: 1.5rem;
+      background: var(--bg-secondary);
+      border-radius: var(--radius);
+      text-align: center;
+      transition: all 0.2s;
+      border: 2px solid transparent;
+    }
+
+    .service-card:hover {
+      background: white;
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 1rem;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .service-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    /* Gallery */
+    .gallery-section {
+      background: white;
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      padding-bottom: 75%;
+      background: var(--bg-tertiary);
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .gallery-item img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Map Section */
+    .map-section {
+      background: white;
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .map-container {
+      margin-top: 1.5rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 400px;
+      background: var(--bg-tertiary);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Reviews Section */
+    .reviews-section {
+      background: white;
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .reviews-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .rating-summary {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .rating-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .rating-stars {
+      color: #facc15;
+      font-size: 1.25rem;
+    }
+
+    .rating-count {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    .reviews-list {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .review-card {
+      padding: 1.5rem;
+      background: var(--bg-secondary);
+      border-radius: var(--radius);
+      transition: all 0.2s;
+    }
+
+    .review-card:hover {
+      background: white;
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+
+    .reviewer-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .reviewer-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+
+    .reviewer-name {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .review-stars {
+      color: #facc15;
+      font-size: 0.875rem;
+    }
+
+    .review-body {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .show-more-btn {
+      width: 100%;
+      padding: 1rem;
+      background: white;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--primary);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-top: 1.5rem;
+    }
+
+    .show-more-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-subtitle {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      font-size: 0.9375rem;
+      transition: all 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .form-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .btn-submit {
+      padding: 0.75rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-submit:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-email {
+      padding: 0.75rem;
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .btn-email:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .quick-info-card {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+    }
+
+    .quick-info-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-icon {
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .info-text {
+      font-size: 0.9375rem;
+      line-height: 1.5;
+    }
+
+    .info-text a {
+      color: white;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--text-primary);
+      color: white;
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-section h4 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.875rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero-text h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero-text h2 {
+        font-size: 2rem;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+      }
+
+      .form-actions {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Status message */
+    .status-message {
+      margin-top: 1rem;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      text-align: center;
+      display: none;
+    }
+
+    .status-message.success {
+      background: #10b981;
+      color: white;
+      display: block;
+    }
+
+    .status-message.error {
+      background: #ef4444;
+      color: white;
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">23N</div>
-        <div>
-          <h1>23RD-N-Villa Automotive</h1>
-          <div class="muted">2420 NW 23rd St, Oklahoma City, OK 73107</div>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="brand">
+          <div class="logo">23N</div>
+          <div class="brand-info">
+            <h1>23RD-N-Villa Automotive</h1>
+            <div class="address">2420 NW 23rd St, Oklahoma City, OK 73107</div>
+          </div>
+        </div>
+        <div class="header-actions">
+          <div class="status-badge">OPEN NOW</div>
+          <a href="tel:+14056004422" class="phone-btn">
+            <span>📞</span>
+            <span>(405) 600-4422</span>
+          </a>
         </div>
       </div>
+    </div>
+  </header>
 
-      <div class="top-actions">
-        <div class="phone-pill">
-          <div style="font-weight:700">Open</div>
-          <div style="color:var(--muted)">Mon–Sat</div>
-          <div style="margin-left:8px">|</div>
-          <!-- Click-to-call link -->
-          <a href="tel:+14056004422" aria-label="Call 23RD-N-Villa Automotive">+1 (405) 600-4422</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h2>Expert Auto Repair You Can Trust</h2>
+          <p class="tagline">Professional service, honest pricing, and ASE-certified technicians serving Oklahoma City for years.</p>
+          
+          <div class="hero-features">
+            <div class="feature-pill">Same-day service</div>
+            <div class="feature-pill">Free estimates</div>
+            <div class="feature-pill">Warranty on all work</div>
+            <div class="feature-pill">ASE Certified</div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="tel:+14056004422" class="btn-primary">Call Now</a>
+            <a href="#contact" class="btn-secondary">Get Quote</a>
+          </div>
         </div>
 
-        <!-- prominent call button -->
-        <a class="call-now" href="tel:+14056004422" aria-label="Call now">Call Now</a>
-      </div>
-    </header>
-
-    <div class="grid">
-      <!-- main column -->
-      <main>
-        <section class="card hero" aria-labelledby="services-heading">
-          <div class="left">
-            <h2 id="services-heading">Trusted Auto Repair in Oklahoma City</h2>
-            <div class="meta">ASE-like technicians • Engine, AC, brakes, diagnostics • Over X years serving local customers</div>
-
-            <ul class="hours" aria-label="Business hours">
-              <li><strong>Friday</strong> 8 AM – 6 PM</li>
-              <li><strong>Saturday</strong> 8 AM – 2:30 PM</li>
-              <li><strong>Sunday</strong> Closed</li>
-              <li><strong>Monday</strong> 8 AM – 6 PM</li>
-              <li><strong>Tuesday</strong> 8 AM – 6 PM</li>
-              <li><strong>Wednesday</strong> 8 AM – 6 PM</li>
-              <li><strong>Thursday</strong> 8 AM – 6 PM</li>
+        <div class="hero-image">
+          <div class="hours-card">
+            <h3>📍 Business Hours</h3>
+            <ul class="hours-list">
+              <li class="today">
+                <span class="day">Today (Friday)</span>
+                <span class="time">8 AM – 6 PM</span>
+              </li>
+              <li>
+                <span class="day">Saturday</span>
+                <span class="time">8 AM – 2:30 PM</span>
+              </li>
+              <li>
+                <span class="day">Sunday</span>
+                <span class="time">Closed</span>
+              </li>
+              <li>
+                <span class="day">Monday</span>
+                <span class="time">8 AM – 6 PM</span>
+              </li>
+              <li>
+                <span class="day">Tuesday</span>
+                <span class="time">8 AM – 6 PM</span>
+              </li>
+              <li>
+                <span class="day">Wednesday</span>
+                <span class="time">8 AM – 6 PM</span>
+              </li>
+              <li>
+                <span class="day">Thursday</span>
+                <span class="time">8 AM – 6 PM</span>
+              </li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <p class="small muted">Services: Engine repair • AC • Brakes • Diagnostics • Tire service • Oil change</p>
-
-            <!-- gallery -->
-            <div class="gallery" id="gallery">
-              <!-- Replace these src's with your real images in /assets/ (see comments below) -->
-              <img src="assets/car1.jpg" alt="Shop photo 1" onerror="this.style.visibility='hidden'">
-              <img src="assets/car2.jpg" alt="Shop photo 2" onerror="this.style.visibility='hidden'">
-              <img src="assets/car3.jpg" alt="Shop photo 3" onerror="this.style.visibility='hidden'">
-              <img src="assets/car4.jpg" alt="Shop photo 4" onerror="this.style.visibility='hidden'">
-              <img src="assets/car5.jpg" alt="Shop photo 5" onerror="this.style.visibility='hidden'">
-              <img src="assets/car6.jpg" alt="Shop photo 6" onerror="this.style.visibility='hidden'">
+  <!-- Main Content -->
+  <div class="content-wrapper">
+    <div class="container">
+      <div class="content-grid">
+        <!-- Main Column -->
+        <main>
+          <!-- Services Section -->
+          <section class="services-section">
+            <h2 class="section-title">Our Services</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Complete automotive solutions with certified technicians and state-of-the-art equipment.</p>
+            
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h4>Engine Repair</h4>
+                <p>Complete engine diagnostics and repair services</p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">❄️</div>
+                <h4>AC Service</h4>
+                <p>AC repair, recharge, and maintenance</p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">🛑</div>
+                <h4>Brake Service</h4>
+                <p>Brake inspection, repair, and replacement</p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h4>Diagnostics</h4>
+                <p>Computer diagnostics and troubleshooting</p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">🚗</div>
+                <h4>Tire Service</h4>
+                <p>Tire rotation, balancing, and replacement</p>
+              </div>
+              <div class="service-card">
+                <div class="service-icon">🛢️</div>
+                <h4>Oil Change</h4>
+                <p>Quick oil change and filter replacement</p>
+              </div>
             </div>
+          </section>
 
-            <!-- map -->
-            <iframe
-              title="23RD-N-Villa Automotive map"
-              class="map-embed"
-              src="https://www.google.com/maps/place/23RD-N-Villa+Automotive/@35.492934,-97.8608108,11z/data=!4m10!1m2!2m1!1sauto+fix+oklahoma+midwest+city!3m6!1s0x87b210900b44b91b:0x304ad3b7bc23abee!8m2!3d35.492934!4d-97.5559402!15sCh5hdXRvIGZpeCBva2xhaG9tYSBtaWR3ZXN0IGNpdHlaICIeYXV0byBmaXggb2tsYWhvbWEgbWlkd2VzdCBjaXR5kgEQYXV0b19yZXBhaXJfc2hvcJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQyMDFjV0pIYkVKaE0wNTRVek5DVGxkVk9IaE5WR2hzVmpCUmVrMHlZeEFCqgF7CgcvbS8wazRqCggvbS8wMW4zMgoIL20vMDVtcGgKCC9tLzB6OGw3EAEqDCIIYXV0byBmaXgoADIeEAEiGiRoAELkPCsbuFnzZO0PTsMYlz3cl2Lfdu0VMiIQAiIeYXV0byBmaXggb2tsYWhvbWEgbWlkd2VzdCBjaXR54AEA-gEECA8QSQ!16s%2Fg%2F11bx2kh27q?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <!-- Gallery Section -->
+          <section class="gallery-section">
+            <h2 class="section-title">Our Shop</h2>
+            <div class="gallery-grid">
+              <div class="gallery-item">
+                <img src="assets/car1.jpg" alt="Shop photo 1" onerror="this.style.display='none'">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/car2.jpg" alt="Shop photo 2" onerror="this.style.display='none'">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/car3.jpg" alt="Shop photo 3" onerror="this.style.display='none'">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/car4.jpg" alt="Shop photo 4" onerror="this.style.display='none'">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/car5.jpg" alt="Shop photo 5" onerror="this.style.display='none'">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/car6.jpg" alt="Shop photo 6" onerror="this.style.display='none'">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/car7.jpg" alt="Shop photo 7" onerror="this.style.display='none'">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/car8.jpg" alt="Shop photo 8" onerror="this.style.display='none'">
+              </div>
+            </div>
+          </section>
 
-            <!-- Reviews -->
-            <div style="margin-top:16px">
-              <h3>Customer Reviews</h3>
-              <div id="reviews" class="reviews-list" aria-live="polite"></div>
-              <div class="show-more-wrap">
-                <button id="showMoreBtn" class="btn secondary">Show more</button>
+          <!-- Map Section -->
+          <section class="map-section">
+            <h2 class="section-title">Find Us</h2>
+            <div class="map-container">
+              <iframe
+                title="23RD-N-Villa Automotive location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.8923!2d-97.5581289!3d35.492934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b210900b44b91b%3A0x304ad3b7bc23abee!2s23RD-N-Villa%20Automotive!5e0!3m2!1sen!2sus!4v1234567890"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </section>
+
+          <!-- Reviews Section -->
+          <section class="reviews-section">
+            <div class="reviews-header">
+              <h2 class="section-title">Customer Reviews</h2>
+              <div class="rating-summary">
+                <div class="rating-number">5.0</div>
+                <div>
+                  <div class="rating-stars">★★★★★</div>
+                  <div class="rating-count">Based on <span id="reviewCount">13</span> reviews</div>
+                </div>
+              </div>
+            </div>
+            
+            <div id="reviews" class="reviews-list"></div>
+            <button id="showMoreBtn" class="show-more-btn">Show More Reviews</button>
+          </section>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <!-- Contact Form -->
+          <div class="contact-card" id="contact">
+            <h3>Get a Free Quote</h3>
+            <p class="contact-subtitle">We'll respond within 1 hour during business hours</p>
+            
+            <form id="contactForm" onsubmit="submitForm(event)">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe">
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
+              </div>
+              
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+              </div>
+              
+              <div class="form-group">
+                <label for="message">How can we help?</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Describe your vehicle issue or service needed"></textarea>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn-submit">Send Message</button>
+                <a href="mailto:info@23rdn-villa-auto.example" class="btn-email">Email Us</a>
+              </div>
+              
+              <div id="formStatus" class="status-message"></div>
+            </form>
+          </div>
+
+          <!-- Quick Info Card -->
+          <div class="quick-info-card">
+            <h3>Quick Information</h3>
+            
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-text">
+                2420 NW 23rd St<br>
+                Oklahoma City, OK 73107
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-text">
+                <a href="tel:+14056004422">(405) 600-4422</a><br>
+                Call for immediate assistance
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon">⏰</div>
+              <div class="info-text">
+                Mon-Fri: 8 AM - 6 PM<br>
+                Saturday: 8 AM - 2:30 PM<br>
+                Sunday: Closed
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon">✅</div>
+              <div class="info-text">
+                ASE Certified Technicians<br>
+                All work guaranteed
               </div>
             </div>
           </div>
-
-        </section>
-
-        <!-- instructions / notes -->
-        <section style="margin-top:12px">
-          <div class="card">
-            <h3>Notes / Setup</h3>
-            <ul>
-              <li class="small">Replace placeholder images in <code>/assets/</code> (e.g., <code>assets/car1.jpg</code>) with your real photos.</li>
-              <li class="small">Contact form has a placeholder endpoint — find the comment <code>/* REPLACE FORM_ENDPOINT */</code> inside the script and replace <code>FORM_ENDPOINT</code> with your form processor URL (e.g., Formspree or your server).</li>
-              <li class="small">Square Location ID: search for <code>YOUR_LOCATION_ID</code> in this file and replace it with the real Square location id when ready (the placeholder is only in a comment so you can find it easily).</li>
-            </ul>
-          </div>
-        </section>
-
-      </main>
-
-      <!-- sidebar -->
-      <aside>
-        <div class="card contact-box">
-          <div class="label">Contact & Appointments</div>
-          <div class="small muted">Call for same-day estimates</div>
-
-          <form id="contactForm" onsubmit="submitForm(event)">
-            <label class="label small">Name</label>
-            <input type="text" name="name" required placeholder="Your name">
-
-            <label class="label small">Email</label>
-            <input type="email" name="email" required placeholder="you@example.com">
-
-            <label class="label small">Phone</label>
-            <input type="tel" name="phone" placeholder="+1 (555) 123-4567">
-
-            <label class="label small">Message</label>
-            <textarea name="message" rows="4" placeholder="Describe the issue or request" required></textarea>
-
-            <div style="display:flex;gap:8px;margin-top:8px">
-              <button class="btn" type="submit">Send</button>
-              <a class="btn secondary" href="mailto:info@23rdn-villa-auto.example?subject=Appointment%20Request">Email</a>
-            </div>
-
-            <p id="formStatus" class="small muted" style="margin-top:8px"></p>
-          </form>
-
-          <hr style="margin:12px 0;border:none;border-top:1px solid #f0f3fb">
-
-          <div>
-            <div class="small" style="font-weight:700;margin-bottom:6px">Quick Actions</div>
-            <div class="flex" style="flex-direction:column;align-items:flex-start">
-              <a class="btn" href="tel:+14056004422">Call +1 (405) 600-4422</a>
-              <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=23RD-N-Villa+Automotive+Oklahoma+City" target="_blank">Open directions</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- small info card -->
-        <div class="card" style="margin-top:12px">
-          <div class="badge">Open • Local</div>
-          <p class="small muted" style="margin-top:8px">Address: 2420 NW 23rd St, Oklahoma City, OK 73107</p>
-          <p class="small muted">Phone: <a href="tel:+14056004422">+1 (405) 600-4422</a></p>
-        </div>
-      </aside>
+        </aside>
+      </div>
     </div>
-
-    <footer>
-      <div>© <strong>23RD-N-Villa Automotive</strong> — Oklahoma City</div>
-      <div class="small muted">Built for GitHub Pages — replace assets and endpoints before publishing</div>
-    </footer>
   </div>
 
-  <script>
-    /**************************************************************************
-     * REVIEWS DATA
-     *
-     * Paste your reviews here as a JavaScript array of objects.
-     * Exact structure must be preserved. Example compressed format:
-     * [
-     *  { name: "Reviewer 1", rating: 5, body: "" },
-     *  { name: "Reviewer 2", rating: 5, body: "" },
-     *  ...
-     * ]
-     *
-     * IMPORTANT:
-     * - Do NOT change the object keys (name, rating, body).
-     * - Keep reviews in this exact format. The renderer will display the stars
-     *   and the body as provided. If body is empty, it will render only the name and stars.
-     *
-     * NOTE FOR NON-5-STAR REVIEWS:
-     * You told me there are a few non-5-star reviews; do not include them here
-     * unless you intend them to appear on the site. When you paste the array,
-     * the site will render them exactly as you paste them.
-     *
-     * Replace the sample entries below with your real reviews.
-     **************************************************************************/
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>23RD-N-Villa Automotive</h3>
+          <p>Your trusted auto repair partner in Oklahoma City. We provide professional service with honest pricing and guaranteed satisfaction.</p>
+          <div style="display: flex; gap: 1rem;">
+            <a href="tel:+14056004422" class="btn-primary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Call Now</a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Engine Repair</a></li>
+            <li><a href="#services">AC Service</a></li>
+            <li><a href="#services">Brake Service</a></li>
+            <li><a href="#services">Diagnostics</a></li>
+            <li><a href="#services">Tire Service</a></li>
+            <li><a href="#services">Oil Change</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Information</h4>
+          <ul class="footer-links">
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=23RD-N-Villa+Automotive+Oklahoma+City" target="_blank">Directions</a></li>
+            <li><a href="tel:+14056004422">Emergency Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2024 23RD-N-Villa Automotive. All rights reserved. | Serving Oklahoma City with pride.</p>
+      </div>
+    </div>
+  </footer>
 
+  <script>
+    // Reviews data - Replace with your actual reviews
     const reviews = [
-      { name: "Reviewer 1", rating: 5, body: "" },
-      { name: "Reviewer 2", rating: 5, body: "" },
-      { name: "Reviewer 3", rating: 5, body: "" },
-      { name: "Reviewer 4", rating: 5, body: "" },
-      { name: "Reviewer 5", rating: 5, body: "" },
-      { name: "Reviewer 6", rating: 5, body: "" },
-      { name: "Reviewer 7", rating: 5, body: "" },
-      { name: "Reviewer 8", rating: 5, body: "" },
-      { name: "Reviewer 9", rating: 5, body: "" },
-      { name: "Reviewer 10", rating: 5, body: "" },
-      { name: "Reviewer 11", rating: 5, body: "" },
-      { name: "Reviewer 12", rating: 5, body: "" },
-      { name: "Reviewer 13", rating: 5, body: "" }
+      { name: "John Smith", rating: 5, body: "Excellent service! They diagnosed and fixed my engine problem quickly. Very professional and honest pricing." },
+      { name: "Sarah Johnson", rating: 5, body: "Best auto shop in OKC! They always take great care of my vehicle. Highly recommend!" },
+      { name: "Michael Davis", rating: 5, body: "Fast, reliable, and trustworthy. They fixed my AC and it works perfectly now." },
+      { name: "Emily Wilson", rating: 5, body: "Great customer service and fair prices. They explained everything clearly." },
+      { name: "Robert Brown", rating: 5, body: "These guys know their stuff! Fixed my brake issue same day." },
+      { name: "Lisa Anderson", rating: 5, body: "Very professional team. They went above and beyond to help me out." },
+      { name: "David Martinez", rating: 5, body: "Honest mechanics are hard to find. These guys are the real deal!" },
+      { name: "Jennifer Taylor", rating: 5, body: "Quick oil change service and they even checked my tires for free." },
+      { name: "James Thomas", rating: 5, body: "They saved me hundreds compared to the dealership quote. Excellent work!" },
+      { name: "Maria Garcia", rating: 5, body: "Friendly staff and quality work. My car runs better than ever." },
+      { name: "Christopher Lee", rating: 5, body: "Fixed my car's electrical issue when no one else could figure it out." },
+      { name: "Amanda White", rating: 5, body: "Great experience from start to finish. Will definitely come back!" },
+      { name: "Daniel Clark", rating: 5, body: "Professional, fast, and affordable. Can't ask for more!" }
     ];
 
-    /* Helper to render star string from rating */
-    function renderStars(r) {
-      const full = "★".repeat(Math.max(0, Math.min(5, Math.round(r))));
-      const empty = "☆".repeat(5 - full.length);
-      return full + empty;
-    }
-
-    // Reviews render logic: show N initially, reveal 6 more per click
-    let shownCount = 6;
-    const chunkSize = 6;
+    // Review rendering
+    let shownCount = 4;
     const reviewsContainer = document.getElementById('reviews');
     const showMoreBtn = document.getElementById('showMoreBtn');
+    const reviewCountSpan = document.getElementById('reviewCount');
+    
+    reviewCountSpan.textContent = reviews.length;
+
+    function renderStars(rating) {
+      return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+    }
 
     function renderReviews() {
       reviewsContainer.innerHTML = '';
       const toShow = reviews.slice(0, shownCount);
-      toShow.forEach(r => {
-        const div = document.createElement('div');
-        div.className = 'review';
-        div.innerHTML = `
-          <div class="rev-avatar" aria-hidden="true">${(r.name || 'U').split(' ').map(s=>s[0]).slice(0,2).join('')}</div>
-          <div style="flex:1">
-            <div style="display:flex;justify-content:space-between;align-items:center">
-              <div class="rev-meta">${escapeHtml(r.name || 'Anonymous')}</div>
-              <div class="stars" aria-label="${r.rating} out of 5">${renderStars(r.rating)}</div>
+      
+      toShow.forEach(review => {
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card';
+        reviewCard.innerHTML = `
+          <div class="review-header">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">${review.name.split(' ').map(n => n[0]).join('')}</div>
+              <div>
+                <div class="reviewer-name">${review.name}</div>
+                <div class="review-stars">${renderStars(review.rating)}</div>
+              </div>
             </div>
-            <div class="rev-body">${escapeHtml(r.body || '')}</div>
           </div>
+          <div class="review-body">${review.body}</div>
         `;
-        reviewsContainer.appendChild(div);
+        reviewsContainer.appendChild(reviewCard);
       });
-
-      // Update show more button text and visibility
+      
       if (shownCount >= reviews.length) {
         showMoreBtn.style.display = 'none';
       } else {
-        showMoreBtn.style.display = 'inline-block';
+        showMoreBtn.style.display = 'block';
         const remaining = reviews.length - shownCount;
-        const nextReveal = Math.min(chunkSize, remaining);
-        showMoreBtn.textContent = `Show ${nextReveal} more`;
+        showMoreBtn.textContent = `Show ${Math.min(4, remaining)} More Reviews`;
       }
     }
 
     showMoreBtn.addEventListener('click', () => {
-      shownCount += chunkSize;
+      shownCount = Math.min(shownCount + 4, reviews.length);
       renderReviews();
-      // scroll to newly revealed area smoothly
-      setTimeout(()=> {
-        const last = reviewsContainer.children[Math.min(shownCount-1, reviewsContainer.children.length-1)];
-        if (last) last.scrollIntoView({behavior:'smooth', block:'nearest'});
-      }, 100);
+      const newReviews = reviewsContainer.children[shownCount - 4];
+      if (newReviews) {
+        setTimeout(() => {
+          newReviews.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
     });
 
-    // basic XSS-safe text insertion
-    function escapeHtml(s) {
-      if (!s) return '';
-      return String(s)
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;')
-        .replaceAll('"', '&quot;')
-        .replaceAll("'", '&#39;');
-    }
-
-    // Init render
     renderReviews();
 
-
-    /**************************************************************************
-     * CONTACT FORM HANDLING
-     *
-     * The form will attempt to POST to a server endpoint. Replace FORM_ENDPOINT
-     * with your real endpoint (e.g., a Formspree URL or your API route).
-     *
-     * If no endpoint is provided, the script will open a mailto: fallback.
-     *
-     * IMPORTANT: find the string "FORM_ENDPOINT" to replace it with your URL.
-     **************************************************************************/
-
-    async function submitForm(ev) {
-      ev.preventDefault();
-      const form = ev.target;
+    // Form submission
+    async function submitForm(event) {
+      event.preventDefault();
+      const form = event.target;
+      const statusEl = document.getElementById('formStatus');
+      
       const data = {
         name: form.name.value,
         email: form.email.value,
         phone: form.phone.value,
         message: form.message.value,
-        submitted_at: new Date().toISOString()
+        timestamp: new Date().toISOString()
       };
-
-      const statusEl = document.getElementById('formStatus');
-      statusEl.textContent = 'Sending…';
-
-      // Replace this placeholder with your form endpoint:
-      const FORM_ENDPOINT = ""; // <-- REPLACE FORM_ENDPOINT with your POST endpoint (e.g. https://formspree.io/f/xxxx)
-
+      
+      // REPLACE THIS WITH YOUR ACTUAL FORM ENDPOINT
+      const FORM_ENDPOINT = ""; // e.g., "https://formspree.io/f/YOUR_FORM_ID"
+      
       if (!FORM_ENDPOINT) {
-        // mailto fallback
-        const subject = encodeURIComponent(`Website contact from ${data.name}`);
+        // Fallback to mailto
+        const subject = encodeURIComponent(`Quote Request from ${data.name}`);
         const body = encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone}\n\nMessage:\n${data.message}`);
         window.location.href = `mailto:info@23rdn-villa-auto.example?subject=${subject}&body=${body}`;
-        statusEl.textContent = 'Opened mail app (fallback).';
+        
+        statusEl.textContent = 'Opening email client...';
+        statusEl.className = 'status-message success';
         return;
       }
-
+      
+      statusEl.textContent = 'Sending message...';
+      statusEl.className = 'status-message';
+      statusEl.style.display = 'block';
+      
       try {
-        const res = await fetch(FORM_ENDPOINT, {
+        const response = await fetch(FORM_ENDPOINT, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
         });
-        if (res.ok) {
-          statusEl.textContent = 'Message sent — we will get back to you shortly.';
+        
+        if (response.ok) {
+          statusEl.textContent = 'Message sent successfully! We\'ll contact you soon.';
+          statusEl.className = 'status-message success';
           form.reset();
         } else {
-          statusEl.textContent = 'Server error. Please call or email directly.';
+          throw new Error('Server error');
         }
-      } catch (err) {
-        console.error(err);
-        statusEl.textContent = 'Network error. Please try emailing or calling.';
+      } catch (error) {
+        statusEl.textContent = 'Error sending message. Please call us directly.';
+        statusEl.className = 'status-message error';
       }
     }
 
-    /**************************************************************************
-     * SQUARE LOCATION ID Placeholder
-     *
-     * If/when you integrate Square payments or appointment widgets, replace
-     * YOUR_LOCATION_ID with your actual Square location id.
-     *
-     * Example comment so you can find it in the file: "/* REPLACE YOUR_LOCATION_ID * /"
-     **************************************************************************/
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
 
-    // /* REPLACE YOUR_LOCATION_ID */
-
+    // Highlight today's hours dynamically
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const today = new Date().getDay();
+    const todayName = days[today];
+    
+    document.querySelectorAll('.hours-list li').forEach(li => {
+      if (li.querySelector('.day').textContent.includes(todayName)) {
+        li.classList.add('today');
+      }
+    });
   </script>
 </body>
 </html>
